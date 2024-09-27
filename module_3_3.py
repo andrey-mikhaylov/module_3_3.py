@@ -1,3 +1,32 @@
+def print_params(a = 1, b = 'строка', c = True) -> None:
+    print(a, b, c)
+
+
+def test():
+    values_list_2 = [54.32, 'Строка']
+    print_params(*values_list_2, 42)
+    """
+    Вывод на консоль:
+    54.32 'Строка' 42
+    """
+
+
+def main():
+    print_params(b=25)
+    print_params(c=[1, 2, 3])
+
+    values_list = [1, '2', True]
+    print_params(*values_list)
+
+    values_dict = {'a': 1, 'b': '2', 'c':True}
+    print_params(**values_dict)
+
+    values_list_2 = [1, '2']
+    print_params(*values_list_2, 42)
+
+
+#test()
+main()
 
 
 """
